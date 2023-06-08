@@ -61,13 +61,20 @@ public class Ejercicio01 {
         String perroBusca = leer.nextLine();
         Iterator<String> it = razaPerro.iterator();
         String ban;
+        cent=false;
         while (it.hasNext()){
             ban=it.next();
             if (ban.equals(perroBusca)){
                 it.remove();
                 System.out.println("Raza liminada: "+ban);
+            }else{
+                cent=true;
             }
         }  
+        if (cent){
+            System.out.println("Raza no encontrada en lista");
+        }
+        
         System.out.println("----------------------");
         
         //Ordenando
