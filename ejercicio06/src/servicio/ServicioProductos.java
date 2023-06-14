@@ -24,9 +24,9 @@ public class ServicioProductos {
     Scanner leerD = new Scanner(System.in);
     
     public void introducirProducto(){
-        System.out.println("Ingrese el procuto que desea guardar");
+        System.out.println("Ingrese el producuto que desea guardar");
         String pruducto = leerS.nextLine();
-        System.out.println("Ingrese el precio del procuto que desea guardar");
+        System.out.println("Ingrese el precio del producuto que desea guardar");
         double precio = leerD.nextDouble();
         //Agreando producto  y precio a Mapa
         productos.put(pruducto, precio);
@@ -34,9 +34,9 @@ public class ServicioProductos {
     }
     
     public void modificarPrecio(){
-        System.out.println("Ingrese el procuto que desea modificar");
+        System.out.println("Ingrese el producuto que desea modificar");
         String producto = leerS.nextLine();
-        System.out.println("Ingrese el precio del procuto que desea modificar");
+        System.out.println("Ingrese el precio del producuto que desea modificar");
         double precio = leerD.nextDouble();
         boolean noModif=true;
         
@@ -44,7 +44,7 @@ public class ServicioProductos {
             String key = entry.getKey();
             if (key.equalsIgnoreCase(producto)){
                 entry.setValue(precio);
-                System.out.println("Preci Modificado exitosamente");
+                System.out.println("Precio Modificado exitosamente");
                 noModif=false;
             }
         }
@@ -55,7 +55,7 @@ public class ServicioProductos {
     }
     
     public void eliminarProducto(){
-         System.out.println("Ingrese el procuto que desea eliminar");
+         System.out.println("Ingrese el producuto que desea eliminar");
         String producto = leerS.nextLine();
         productos.remove(producto);
         
